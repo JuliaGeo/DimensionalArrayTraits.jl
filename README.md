@@ -1,6 +1,6 @@
 # DimensionalArrayTraits.jl
 Abstract base package for dimensional arrays and their specific traits
-__Note this is page currently at the discussion stage.__
+__Note this is package currently in the discussion stage.__
 
 ## Requirements on spatial data/domain types from the user's perspective
 
