@@ -38,7 +38,7 @@ A[Lat(x), Lon(y), Time(At(t))]
 *    Integral over a raster (knowing the "volume" of each grid cell)
 
 ```julia
-volumne(A,i,j,k)
+volume(A,i,j,k)
 ```
 
 *    Time: is the value for the start, middle or (probably never) the end of the duration. Is it an average of the whole period or a specific point in the cell. These specifications should also generalise to any other dimension type.
