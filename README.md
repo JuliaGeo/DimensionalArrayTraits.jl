@@ -28,7 +28,10 @@ coordnames(x) # would return :longitude, :latitude, ... or Lon(), Lat()
 ```
 Use the CF convention names (longitude, latitude, time, …)
 
-*    Subsetting based on lon/lat/depth/time (and arbitrary dimension) bounding box (how to handle irregular grid?)
+*    Subsetting based on lon/lat/depth/time (and arbitrary dimension) bounding box
+*    Irregular grid subsetting returns either: a masked array or a vector of points - need to decide
+     which occurs on `getinidex`.
+
 
 ```
 A[Lat(x), Lon(y), Time(At(t))]
@@ -41,8 +44,8 @@ A[Lat(x), Lon(y), Time(At(t))]
 volume(A,i,j,k)
 ```
 
-*    Time: is the value for the start, middle or (probably never) the end of the duration. Is it an average of the whole period or a specific point in the cell. These specifications should also generalise to any other dimension type.
-*    Categorical dimensions with no size or regularity
+*    Is the cell value for the start, middle or (probably never) the end of the duration/span? Is it an average of the whole period or a specific point in the cell. These specifications should also generalise to any dimension type.
+*    Categorical dimensions with no size and optional ordered/unordered status
 *    Arrays can be plotted correctly using the grid information
 
 ```julia
